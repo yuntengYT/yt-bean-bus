@@ -19,6 +19,7 @@ public class UserInfoController {
 
 	@GetMapping("get-all-user-info")
 	public List<UserInfoVO> getAllUserInfo(UserInfoAO userInfoAO){
+
 		log.info("getAllUserInfo====userId:{}",userInfoAO.getId());
 		UserInfoListService userInfoListService = UserInfoServiceProcessor.USER_INFO_LIST_SERVICE_MAP.get(userInfoAO.getId());
 		return userInfoListService.list(userInfoAO);
