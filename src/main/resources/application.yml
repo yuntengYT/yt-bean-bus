@@ -11,3 +11,6 @@ spring:
   application:
     name: yt-bean-bus
 
+logging:
+  config: classpath:log4j2.yml
+
