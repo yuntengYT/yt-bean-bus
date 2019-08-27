@@ -13,8 +13,8 @@ public class LruCacheService {
 	@Autowired
 	private LRUMap lruMap;
 
-	public void set (String key,String value) {
-		lruMap.putIfAbsent(key,value);
+	public Object set (String key,String value) {
+		return lruMap.put(key, value);
 	}
 
 	public String get (String key) {
